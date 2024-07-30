@@ -10,8 +10,8 @@ app.use( express.json());
 app.use( cors() );
 //ruta, importacion
         //->http://locahost:3000/apis/product/
-app.use('/api/auth', require('./routes/auth.routes'));
-app.use('/api/products' , require('./routes/product.routes'));
+app.use('/api', require('./routes/auth.routes'));
+app.use('/api' , require('./routes/product.routes'));
 app.use('/api/categorys', require('./routes/category.routes'));
 app.use('/api/role', require('./routes/role.routes'));
 

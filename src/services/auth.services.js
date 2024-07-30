@@ -15,11 +15,11 @@ async function registerUser(newUser){
         console.log(dbUser)
         const saveUser = await dbUser.save()
 
-        await saveUser.populate('role').execPopulate();
+        const populatedUser = await UserModel.findById(saveUser._id).populate('role').exec();
 
-        console.log('usuario guardado exitosmanete', saveUser)
+        console.log('usuario guardado exitosmanete', populatedUser)
 
-        return saveUser
+        return populatedUserx   
     } catch (error) {
         console.log(error)
     }

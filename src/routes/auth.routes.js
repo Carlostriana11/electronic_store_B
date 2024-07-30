@@ -4,9 +4,9 @@ const { authUser } = require('../middlewares/auth.jwt');
 
 const router = Router();
 
-router.post('/login', login)
-router.post('/register', register)
-router.get('/renew-token', authUser, renewToken)
+router.post('/auth/login', login)
+router.post('/auth/register', register)
+router.get('/auth/renew-token', authUser, renewToken)
 
 
 module.exports = router
